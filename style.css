@@ -1,0 +1,115 @@
+/* Colores oficiales de WhatsApp */
+:root {
+    --verde-header: #075e54;
+    --verde-chat: #dcf8c6;
+    --fondo-chat: #ece5dd;
+    --blanco: #ffffff;
+    --gris-texto: #666;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dadbd3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal del teléfono/chat */
+.chat-container {
+    width: 100%;
+    max-width: 450px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--fondo-chat);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Encabezado verde */
+.header {
+    background-color: var(--verde-header);
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.header span {
+    font-size: 12px;
+    color: #b3d4d0;
+}
+
+/* Zona donde aparecen los mensajes */
+.mensajes-zona {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo base para las burbujas */
+.burbuja {
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 75%;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Mensajes que envías tú (Verdes y a la derecha) */
+.enviado {
+    align-self: flex-end;
+    background-color: var(--verde-chat);
+}
+
+/* Mensajes que recibes (Blancos y a la izquierda) */
+.recibido {
+    align-self: flex-start;
+    background-color: var(--blanco);
+}
+
+/* Barra inferior para escribir */
+.input-zona {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-zona input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-zona button {
+    background-color: #00a884;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-zona button:hover {
+    background-color: #008f72;
+}
