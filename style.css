@@ -113,3 +113,29 @@ body {
 .input-zona button:hover {
     background-color: #008f72;
 }
+/* 1. Definimos la animación de "aparición" */
+@keyframes aparecerMensaje {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(20px); /* Empieza chiquito y abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* Termina en su tamaño real */
+    }
+}
+
+/* 2. Le aplicamos la animación a las burbujas nuevas */
+.burbuja-animada {
+    animation: aparecerMensaje 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    transform-origin: right bottom; /* Hace que se infle desde la esquina inferior derecha */
+}
+
+/* 3. Un extra: efecto suave en el botón Enviar cuando pasas el mouse */
+.input-zona button {
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.input-zona button:active {
+    transform: scale(0.9); /* Se achica un poquito cuando lo presionas (efecto click) */
+}

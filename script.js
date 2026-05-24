@@ -43,9 +43,15 @@ function agregarMensaje() {
     if (texto === "") return;
 
     // Creamos la burbuja desde cero
-    const nuevaBurbuja = document.createElement('div');
-    nuevaBurbuja.classList.add('burbuja', 'enviado'); // Le ponemos el diseño verde de la derecha
-    nuevaBurbuja.innerText = texto; // Le metemos tu texto dentro
+
+    // Creamos la burbuja del mensaje
+const nuevaBurbuja = document.createElement("div");
+
+// AQUÍ ESTÁ EL CAMBIO: Agregamos las tres clases (incluyendo la animada)
+nuevaBurbuja.classList.add("burbuja", "enviado", "burbuja-animada");
+
+nuevaBurbuja.innerText = texto;
+     // Le metemos tu texto dentro
 
     // Metemos la burbuja adentro de la zona de mensajes
     zonaMensajes.appendChild(nuevaBurbuja);
